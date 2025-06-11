@@ -9,7 +9,7 @@ public class Main {
         // ============================
         System.out.println("I like pizza!"); // Prints with a new line
         System.out.print("It's really good\n"); // \n adds a new line manually
-        System.out.print("Buy me pizza"); // Prints without a new line
+        System.out.print("Buy me pizza"); // Prihnts without a new line
 
         // ============================
         // PRIMITIVE DATA TYPES & VARIABLES
@@ -170,5 +170,31 @@ public class Main {
         double result = 3 + 4 * (7 - 5) / 2.0;
 
         System.out.println(result);
+
+        // SHOPPING CART PROGRAM
+        Scanner scanner = new Scanner(System.in);
+
+        String item;
+        double price;
+        int quantity;
+        char currency = '$';
+        double total;
+
+        System.out.println("What item would you like to buy?: ");
+        item = scanner.nextLine();
+
+        System.out.println("What is the price for each?: ");
+        price = scanner.nextDouble();
+
+        System.out.println("How many would you like?: ");
+        quantity = scanner.nextInt();
+
+        total = price * quantity;
+
+        System.out.println("\nYou have bought " + quantity + " " + item + "/s");
+        System.out.println("Your total is " + currency + total);
+
+        scanner.close();
+
     }
 }
